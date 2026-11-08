@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in | EduConnect</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="/">EduConnect</a>
+    <nav>
+      <a href="#">Find Tutors</a><a href="#">How It Works</a>
+      <a href="#">Subjects</a><a href="#">Become a Tutor</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="/login.html">Log in</a>
+      <a class="btn-outline" href="/register.html">Register</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="form-wrap">
+      <h2>Welcome back</h2>
+      <p class="muted">Log in to continue.</p>
+
+      <form id="loginForm" novalidate>
+        <label>Log in as</label>
+        <div class="toggle" id="roleToggle">
+          <button type="button" class="active" data-role="student">Student</button>
+          <button type="button" data-role="tutor">Tutor</button>
+          <button type="button" data-role="admin">Admin</button>
+        </div>
+
+        <label for="email">Email address</label>
+        <input id="email" type="email" placeholder="Enter email address">
+
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter password">
+
+        <div class="between">
+          <label class="check"><input type="checkbox" id="remember"> Remember me for 30 days</label>
+          <a href="/forgot-password.html">Forgot password?</a>
+        </div>
+
+        <p id="error" class="error" hidden></p>
+        <button type="submit" class="btn-primary">Log in</button>
+
+        <div class="divider"><span>or</span></div>
+        <a class="btn-outline google" href="/api/auth/google">Continue with Google</a>
+
+        <p class="center muted" style="margin-top:24px">New to EduConnect? <a href="/register.html"><b>Create an account</b></a></p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <a href="#">Terms of Service</a><a href="#">Privacy Policy</a><a href="#">Contact</a>
+  </footer>
+  <script src="/js/login.js"></script>
+</body>
+</html>

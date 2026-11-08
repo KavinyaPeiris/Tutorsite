@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register | EduConnect</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="/">EduConnect</a>
+    <nav>
+      <a href="#">Find Tutors</a><a href="#">How It Works</a>
+      <a href="#">Subjects</a><a href="#">Become a Tutor</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="/login.html">Log in</a>
+      <a class="btn-outline" href="/register.html">Register</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="form-wrap">
+      <h2>Create your account</h2>
+      <p class="muted">It only takes a minute.</p>
+
+      <form id="registerForm" novalidate>
+        <label>I want to join as</label>
+        <div class="toggle" id="roleToggle">
+          <button type="button" class="active" data-role="student">I'm a student</button>
+          <button type="button" data-role="tutor">I'm a tutor</button>
+        </div>
+
+        <div class="row">
+          <div><label for="fullName">Full name</label>
+            <input id="fullName" placeholder="Enter full name"></div>
+          <div><label for="mobile">Mobile number</label>
+            <input id="mobile" type="tel" placeholder="Enter mobile number"></div>
+        </div>
+
+        <label for="email">Email address</label>
+        <input id="email" type="email" placeholder="Enter email address">
+
+        <div class="row">
+          <div><label for="password">Password</label>
+            <input id="password" type="password" placeholder="Enter password"></div>
+          <div><label for="confirmPassword">Confirm password</label>
+            <input id="confirmPassword" type="password" placeholder="Re-enter password"></div>
+        </div>
+
+        <div id="studyBlock">
+          <label>I'm studying for</label>
+          <div class="chips" id="studyChips">
+            <button type="button" data-level="GCE_OL">GCE O/L</button>
+            <button type="button" class="active" data-level="GCE_AL">GCE A/L</button>
+            <button type="button" data-level="OTHER">Other</button>
+          </div>
+        </div>
+
+        <label class="check" style="margin-top:22px">
+          <input type="checkbox" id="terms">
+          I agree to the Terms of Service and Privacy Policy
+        </label>
+
+        <p id="error" class="error" hidden></p>
+        <button type="submit" class="btn-primary">Create account</button>
+        <p class="center muted">Already have an account? <a href="/login.html"><b>Log in</b></a></p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <a href="#">Terms of Service</a><a href="#">Privacy Policy</a><a href="#">Contact</a>
+  </footer>
+  <script src="/js/register.js"></script>
+</body>
+</html>
